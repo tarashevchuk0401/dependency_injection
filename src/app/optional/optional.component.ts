@@ -1,4 +1,4 @@
-import {Component, Optional} from '@angular/core';
+import {Component, OnInit, Optional} from '@angular/core';
 import {LoggerService} from "../services/logger.service";
 
 @Component({
@@ -8,14 +8,14 @@ import {LoggerService} from "../services/logger.service";
   templateUrl: './optional.component.html',
   styleUrl: './optional.component.scss'
 })
-export class OptionalComponent {
-  constructor(@Optional() private loggerService: LoggerService){}
+export class OptionalComponent implements OnInit{
+  constructor( @Optional() private loggerService: LoggerService){}
 
   ngOnInit() {
     if(this.loggerService){
-      this.loggerService.consoleData()
+      this.loggerService.consoleData(OptionalComponent.name)
     } else {
-      console.log('Service is not available')
+      console.log('__Logger Service is NOT AVAILABLE__')
     }
   }
 }

@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class LoggerService {
+// @Injectable({
+//   providedIn: 'root'
+// })
+export class LoggerService  {
 
-  constructor() { }
+  constructor() {
 
-  consoleData(){
-      console.log('logger service')
+  }
+
+  consoleData(componentName?: string) {
+      console.log(`___LOGGER SERVICE WORKS____ in ___ ${componentName} `)
   }
 }
