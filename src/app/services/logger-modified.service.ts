@@ -1,14 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class LoggerModifiedService {
+  constructor() {}
 
-    consoleData(){
+  consoleData() {
     console.log('alfa service modified')
   }
-
-  next(){
-     console.log('next')
-  }
-
 }
