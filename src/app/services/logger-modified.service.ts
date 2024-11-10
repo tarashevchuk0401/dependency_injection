@@ -4,9 +4,12 @@ import { Injectable } from '@angular/core'
   providedIn: 'root',
 })
 export class LoggerModifiedService {
-  constructor() {}
+  constructor() {
+    console.log('Logger service modified')
+
+  }
 
   consoleData() {
-    console.log('alfa service modified')
+    console.log('Logger service modified')
   }
 }
